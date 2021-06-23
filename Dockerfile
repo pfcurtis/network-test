@@ -1,8 +1,9 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 RUN export DEBIAN_FRONTEND=noninteractive; apt-get -qqy update &&  apt-get install -y \
     iputils-arping iputils-ping iputils-tracepath dnsutils iperf3 net-tools iproute2 netcat \
-    make g++ gcc tzdata vim automake git
+    telnet openssh-server openssh-client curl jq dns-utils \
+    make g++ gcc tzdata vim-tiny automake git
 
 RUN git clone https://github.com/Mellanox/sockperf.git
 RUN cd sockperf && ./autogen.sh && ./configure && make
