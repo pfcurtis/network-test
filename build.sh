@@ -9,4 +9,4 @@ docker buildx build \
 --build-arg=COMMIT=${COMMIT} \
 --build-arg=BRANCH=${BRANCH} \
 --platform linux/arm64,linux/amd64 \
--t pfcurtis/network-test:${TAG} -f Dockerfile .
+-t pfcurtis/network-test:latest -f Dockerfile .
