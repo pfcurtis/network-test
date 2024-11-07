@@ -7,3 +7,5 @@ iproute2, net-tools, sockperf**, tracepath, ping, arpping, ssh, curl, jq, telnet
 ** -- 'sockperf' is a multicast packet test tool written by Mellanox. https://github.com/Mellanox/sockperf
 
 This container can be used to test or debug networking issues on Kubernetes or Docker.
+
+```kubectl run -it --rm network --image pfcurtis/network-test -- /bin/bash```
